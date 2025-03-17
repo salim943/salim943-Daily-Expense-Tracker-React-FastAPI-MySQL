@@ -1,0 +1,470 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Virtual Labs</title>
+    <link rel="stylesheet" href="../../../assets/css/vlabs-style.css" />
+    <link rel="shortcut icon" href="../../../assets/images/favicon.ico" />
+  </head>
+  <body>
+    <header class="border-b-orange-500 border-b-8">
+      <nav class="flex justify-between">
+        <button class="px-4 py-1 rounded-r-md border-r" onclick="showModal()">
+          <img
+            class="w-[30px] h-[30px]"
+            src="../../../assets/images/menu.png"
+          />
+        </button>
+        <div class="flex justify-center">
+          <a href="https://vlab.co.in" class="navbar-brand">
+            <img
+              src="../../../assets/images/vlabs-color-small-moe.jpg"
+              alt="vlabs logo"
+              class="mx-4 px-4 max-md:w-[118px] max-md:h-[64px] py-2"
+            />
+          </a>
+        </div>
+        <div id="headerNavbar" class="flex items-center ml-auto max-md:hidden">
+          <ul
+            class="flex text-center text-[#2c98cd]"
+            style="font-family: Raleway, sans-serif"
+          >
+            <li class="px-2 m-1">
+              <a
+                class="mx-4 px-4 py-2 hover:bg-[#99cc3e] hover:underline hover:text-white rounded-lg"
+                href="https://vlab.co.in"
+                >HOME</a
+              >
+            </li>
+            <li class="px-2 m-1">
+              <a
+                class="mx-4 px-4 py-2 hover:bg-[#99cc3e] hover:underline hover:text-white rounded-lg"
+                href="https://vlab.co.in/participating-institutes"
+                >PARTNERS</a
+              >
+            </li>
+            <li class="px-2 m-1">
+              <a
+                class="mx-4 px-4 py-2 hover:bg-[#99cc3e] hover:underline hover:text-white rounded-lg"
+                href="https://vlab.co.in/contact-us"
+                >CONTACT</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- overlaynavbar -->
+      <div
+        class="overlaycontainer w-[100%] h-[100vh] bg-[#00000080] fixed top-[0%] -z-50 opacity-0"
+      ></div>
+      <div
+        class="overlaysignupform ease-in-out duration-100 fixed -top-[150%] left-[50%] -translate-x-1/2 z-50"
+      >
+        <div class="flex justify-center items-center px-4 h-[100vh] w-[100vw]">
+          <div
+            class="relative bg-white border border-solid border-[#00000033] rounded-md w-[498px] flex flex-col overflow-y-auto"
+          >
+            <div class="p-4 flex justify-between items-center border-b">
+              <div class="w-[87px] h-[50px] flex justify-center items-center">
+                <a href="https://vlab.co.in">
+                  <img
+                    src="../../../assets/images/vlabs-color-small-moe.jpg"
+                    alt="vlabs logo"
+                    class="w-[71px] h-[40px]"
+                  />
+                </a>
+              </div>
+              <button class="w-[24px] h-[24px]" onclick="closeModal()">
+                <img src="../../../assets/images/close.png" />
+              </button>
+            </div>
+            <div
+              class="p-4 flex flex-col text-[19.2px] font-bold text-[#3e6389]"
+            >
+              <div class="flex justify-center">
+                <a
+                  href="../index.html"
+                  class="p-2 hover:text-[#343a40] hover:underline"
+                >
+                  Aim
+                </a>
+              </div>
+              <div class="flex justify-center">
+                <a
+                  href="../theory.html"
+                  class="p-2 text-[#FF6600] hover:underline"
+                >
+                  Theory
+                </a>
+              </div>
+              <div class="flex justify-center">
+                <a
+                  href="../procedure.html"
+                  class="p-2 hover:text-[#343a40] hover:underline"
+                >
+                  Procedure
+                </a>
+              </div>
+              <div class="flex justify-center">
+                <a
+                  href="../simulation.html"
+                  class="p-2 hover:text-[#343a40] hover:underline"
+                >
+                  Simulation
+                </a>
+              </div>
+              <div class="flex justify-center">
+                <a
+                  href="../observations.html"
+                  class="p-2 hover:text-[#343a40] hover:underline"
+                >
+                  Observations
+                </a>
+              </div>
+              <div class="flex justify-center">
+                <a
+                  href="../references.html"
+                  class="p-2 hover:text-[#343a40] hover:underline"
+                >
+                  References
+                </a>
+              </div>
+              <div class="flex justify-center">
+                <a
+                  href="../feedback.html"
+                  class="p-2 hover:text-[#343a40] hover:underline"
+                >
+                  Feedback
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- sidebar and body -->
+    <div class="flex min-h-[380px]">
+      <div class="maincontent px-8 pb-6 flex-1">
+        <div
+          class="w-full text-[19.2px] text-[#313636]"
+          style="font-family: Raleway, sans-serif"
+        >
+          <h2
+            class="text-center pt-6 border-b pb-2 mb-2 text-[#2C99CE] text-[32px]"
+          >
+            Phase Shift Keying (PSK)
+          </h2>
+          <h3 class="text-[24px] font-semibold text-black">PSK Transmitter:</h3>
+
+          <p class="mb-4">
+            In PSK, binary ‘1’ is represented by the actual carrier, and binary
+            0 by the 180-degree phase shift of the carrier.
+          </p>
+          <div class="flex justify-center">
+            <img
+              src="../../../assets/images/theory/digitalmodulation/psk1.png"
+              alt="psk_image"
+            />
+          </div>
+          <p>
+            1 => S1(t) = Accos2Пfct <br />
+            0 => S2(t) = Accos{2Пfct + 1800} = - Accos2Пfct<br />
+            <br />
+            Here, the electric signaling scheme is NRZ <br />
+            1 = +ve <br />
+            0 = -ve <br />
+            <br />
+          </p>
+          <h3 class="text-[24px] font-semibold text-black">PSK Receiver:</h3>
+          <p>For the demodulation of PSK, a soft detector (SD) will be used</p>
+          <div class="flex justify-center">
+            <img
+              src="../../../assets/images/theory/digitalmodulation/psk2.png"
+              alt="fsk_image"
+            />
+          </div>
+          <p class="">
+            1 => Accos2Пfct.Accos2Пfct => (Ac)2 / 2 > Vth <br />
+            0 => Accos2Пfct.(-Accos2Пfct) => -(Ac)2 / 2 < Vth
+          </p>
+          <h3 class="text-[24px] font-semibold text-black">
+            a. Constellation Diagram
+          </h3>
+          <h3 class="text-[24px] font-semibold text-black">
+            Energy per bit (Eb):
+          </h3>
+          <p>
+            ** for Transmission of binary ‘1’ <br />
+            Eb = ∫_0^Tb▒(Ac.cos2П.fc.t)^2 dt <br />
+            = ∫_0^Tb▒〖〖((Ac)〗^2/2)〗 dt +
+            ∫_0^Tb▒〖〖((Ac)〗^2.cos4П.fc.t)/2)〗 dt <br />
+            = ∫_0^Tb▒〖〖((Ac)〗^2/2)〗 dt + 0 (area = 0 due to complete cycle)
+            <br />
+            = 〖((Ac)〗^2/2).Tb <br />
+            Ac = √(2Eb/Tb)
+            <br />
+            <br />
+
+            ** for Transmission of binary ‘0’ Eb = ∫_0^Tb▒(-Ac.cos2П.fc.t)^2 dt
+            <br />
+            = ∫_0^Tb▒〖〖((Ac)〗^2/2)〗 dt +
+            ∫_0^Tb▒〖〖((Ac)〗^2.cos4П.fc.t)/2)〗 dt <br />
+            = ∫_0^Tb▒〖〖((Ac)〗^2/2)〗 dt + 0 (area = 0 due to complete cycle)
+            <br />
+            = 〖((Ac)〗^2/2).Tb <br />
+            Ac = √(2Eb/Tb) <br />
+            <br />
+            ** Constellation Diagram <br />
+            1 => S1(t) = Ac.cos2П.fc.t = √(2Eb/Tb).cos2Пfct = √(Eb).
+            √(2/Tb).cos2Пfct <br />
+            0 => S2(t) = -Ac.cos2П.fc.t = -√(2Eb/Tb).cos2Пfct = -√(Eb).
+            √(2/Tb).cos2Пfct <br />
+          </p>
+          <div class="flex justify-center">
+            <img
+              src="../../../assets/images/theory/digitalmodulation/psk3.png"
+              alt="psk_image"
+            />
+          </div>
+          <p class="mb-4 text-center font-semibold text-black">
+            Figure: Constellation Diagrams of PSK
+          </p>
+          <p>
+            So, energy of S1(t) = (√(Eb))2 = Eb <br />
+            So, energy of S2(t) = (-√(Eb))2 = Eb <br />
+            <br />
+            Distance between the signaling points, d12 = 2(√(Eb)) <br />
+            <br />
+            High-order PSK (e.g., 8 PSK, 16 PSK) can transmit more bits per
+            symbol but is more sensitive to noise. Low-order PSK (e.g., BPSK,
+            QPSK) is less susceptible to noise. <br />
+            PSK modulation can be visualized using a constellation diagram,
+            where each point represents a symbol. In the presence of noise,
+            points may be away from the original positions, making them harder
+            to distinguish. <br />
+            <br />
+          </p>
+          <h3 class="text-[24px] font-semibold text-black">
+            b. Under different noise configurations
+          </h3>
+          <p>
+            <span class="font-semibold my-1">PSK Modulation with AWGN</span>
+            <br />
+            In PSK modulation, digital data is represented by varying the phase
+            of the carrier signal. Binary PSK (BPSK) is a common form of PSK
+            modulation where the carrier phase is shifted by 180 degrees for
+            different binary symbols. <br />
+            <br />
+            Mathematically, the PSK-modulated signal x(t) can be represented as:
+            <br />
+            x(t) = Accos2Пfct, { for binary symbol 1} <br />
+            x(t) = Accos(2Пfct + 180), { for binary symbol 0} <br />
+            <br />
+            Where: <br />
+            fc is the carrier frequency. <br />
+            Ac is the carrier amplitude. <br />
+            <br />
+            In the presence of AWGN, the received signal y(t) becomes: <br />
+            y(t) = x(t) + n(t) <br />
+            Where: <br />
+            x(t) is the PSK-modulated signal. <br />
+            n(t) is the AWGN. <br />
+            <br />
+            The AWGN introduces noise across all phases and amplitudes,
+            impacting the phase shifts of the PSK signal. Since PSK relies on
+            phase differences for symbol differentiation, the noise can cause
+            phase shifts, leading to errors in demodulation. The SNR
+            (signal-to-noise ratio) plays a crucial role in determining the
+            quality of demodulation. <br />
+            <br />
+            <span class="font-semibold my-1"
+              >PSK Modulation with Rayleigh Fading:</span
+            >
+            <br />
+            Rayleigh fading introduces random amplitude and phase variations to
+            the received signal due to multipath propagation. In the case of PSK
+            modulation, the mathematical representation of the received signal
+            (y(t) under Rayleigh fading is: <br />
+            y(t) = h . x(t) + n(t) <br />
+            Where: <br />
+            h is the complex fading coefficient. <br />
+            x(t) is the PSK-modulated signal. <br />
+            n(t) is the noise. <br />
+            <br />
+            The fading coefficient h introduces random variations in both
+            amplitude and phase to the signal components. These variations
+            affect the phases of the PSK signal, potentially leading to errors
+            in phase detection and symbol demodulation. <br />
+            <br />
+            PSK modulation under different noise configurations involves adding
+            noise to the modulated signal. AWGN introduces phase and amplitude
+            noise across all phases, affecting PSK symbol differentiation.
+            Rayleigh fading introduces random amplitude and phase variations due
+            to multipath propagation, impacting the phase of the PSK signal. The
+            reliability of PSK demodulation depends on the SNR for AWGN and the
+            characteristics of the fading channel for Rayleigh fading.
+          </p>
+          <h3 class="text-[24px] font-semibold text-black">
+            c. Under Different Scenarios
+          </h3>
+          <p>
+            Phase Shift Keying (PSK) is a modulation technique where the phase
+            of a carrier signal is varied to transmit digital information. The
+            performance of PSK modulation can vary in different scenarios based
+            on factors such as signal-to-noise ratio (SNR), noise, interference,
+            and channel conditions. <br />
+            <br />
+
+            <span class="font-semibold my-1"> High SNR (Low Noise):</span><br />
+            PSK modulation performs well in scenarios with high SNR and low
+            noise levels. The different phase shifts corresponding to binary
+            states can be accurately detected at the receiver, leading to
+            accurate data detection and low error rates. <br />
+            <br />
+            <span class="font-semibold my-1">Low SNR (High Noise):</span><br />
+            PSK modulation is sensitive to phase changes, which can lead to
+            errors in low SNR scenarios due to noise-induced phase fluctuations.
+            In situations with low SNR and high noise, the receiver might
+            struggle to distinguish the correct phase shifts, leading to
+            increased error rates.<br />
+            <br />
+            <span class="font-semibold my-1">Modulation Index:</span><br />
+            The choice of modulation index, which defines the phase separation
+            between different symbols, can impact PSK modulation's performance.
+            In some scenarios, a larger modulation index can lead to better
+            differentiation between phases, while in others, it might increase
+            susceptibility to phase noise. <br />
+            <br />
+            <span class="font-semibold my-1">Interference and Crosstalk:</span
+            ><br />
+            PSK modulation can be affected by interference and crosstalk, which
+            can lead to phase shifts in the received signal. Interference can
+            cause phase ambiguity, resulting in errors in phase detection at the
+            receiver. <br />
+            <br />
+            <span class="font-semibold my-1">Frequency Selective Fading:</span
+            ><br />
+            Similar to other modulation techniques, PSK modulation can
+            experience frequency-selective fading, which can distort the phase
+            of the received signal. Rapid phase changes due to fading can lead
+            to difficulties in accurate phase detection. <br />
+            <br />
+            <span class="font-semibold my-1">Channel Distortion:</span><br />
+            Distortions introduced by the communication channel, such as phase
+            shifts or amplitude changes, can affect the received PSK signal.
+            These distortions can lead to errors in phase detection and,
+            consequently, data detection. <br />
+            <br />
+            <span class="font-semibold my-1">Coherent Detection:</span><br />
+            Coherent detection of PSK modulation requires carrier
+            synchronization at the receiver. In scenarios where carrier
+            synchronization is challenging, phase errors can accumulate over
+            time, degrading the overall system performance. <br />
+            <br />
+            <span class="font-semibold my-1">Adaptive Modulation:</span><br />
+            Adaptive modulation techniques can be employed with PSK to
+            dynamically adjust the modulation index or constellation size based
+            on channel conditions. This allows for optimization of data rate and
+            reliability according to the scenario. <br />
+            <br />
+            <span class="font-semibold my-1">Error Correction Coding:</span
+            ><br />
+            Like other modulation techniques, adding error correction codes can
+            enhance PSK modulation's performance in noisy environments. These
+            codes provide redundancy, allowing the receiver to correct errors
+            caused by noise or phase fluctuations. <br />
+            PSK modulation offers advantages in scenarios with favorable SNR and
+            can be sensitive to phase changes in noisy or interference-prone
+            environments. Its performance depends on factors like modulation
+            index, carrier synchronization, and the presence of noise or
+            distortion. Employing techniques such as error correction coding and
+            adaptive modulation can help optimize PSK modulation's performance
+            in various scenarios.<br />
+            <br />
+          </p>
+          <!--  -->
+        </div>
+      </div>
+    </div>
+    <footer class="">
+      <div class="flex max-sm:flex-col text-white bg-[#111111] px-6">
+        <div class="flex-1 flex flex-col px-[15px]">
+          <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3"
+            >Community Links</span
+          >
+          <a href="https://www.sakshat.ac.in/" class="text-light"
+            >Sakshat Portal</a
+          >
+          <a href="http://outreach.vlabs.ac.in/" class="text-light"
+            >Outreach Portal</a
+          >
+          <a href="https://vlab.co.in/faq" class="text-light"
+            >FAQ: Virtual Labs</a
+          >
+        </div>
+        <div class="flex-1 flex flex-col px-[15px]">
+          <span class="font-bold vlabs-footer-sect-name pb-2 mb-3"
+            >Contact Us</span
+          >
+          <span> Phone: General Information: 011-26582050 </span>
+          <span> Email: support@vlabs.ac.in </span>
+        </div>
+        <div class="flex-1 flex flex-col px-[15px]">
+          <span class="font-bold vlabs-footer-sect-name pb-2 mb-3"
+            >Follow Us</span
+          >
+          <div class="flex pb-2">
+            <a
+              class="p-2 mt-1 mr-2 rounded-full flex justify-center items-center"
+              style="background: #55acee"
+              href="https://twitter.com/TheVirtualLabs"
+            >
+              <img src="../../../assets/images/twitter.png" alt="twitter" />
+            </a>
+            <a
+              class="p-2 mt-1 mr-2 flex rounded-full justify-center items-center"
+              style="background: #3b5998"
+              href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/"
+            >
+              <img src="../../../assets/images/facebook.png" alt="facebook" />
+            </a>
+            <a
+              class="p-2 mt-1 mr-2 flex rounded-full justify-center items-center"
+              style="background: #e52d27"
+              href="https://www.youtube.com/watch?v=asxRaOgk6a0"
+            >
+              <img src="../../../assets/images/youtube.png" alt="youtube" />
+            </a>
+            <a
+              class="p-2 mt-1 mr-2 flex rounded-full justify-center items-center"
+              style="background: #2867b2"
+              href="https://in.linkedin.com/in/virtual-labs-008ba9136"
+            >
+              <img src="../../../assets/images/linkedin.png" alt="linkedin" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="m-0 py-2 text-center text-white text-sm max-sm:text-[12px]"
+        style="font-family: 'Open Sans', sans-serif; background: #212121"
+      >
+        <a
+          class="text-[#007bff] hover:text-[#3273dc] hover:underline font-bold"
+          href="https://www.gnu.org/licenses/agpl-3.0.en.html"
+        >
+          AGPL 3.0
+        </a>
+        &nbsp;&amp;&nbsp;
+        <a
+          class="text-[#007bff] hover:text-[#3273dc] hover:underline font-bold"
+          href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+        >
+          Creative Commons (CC BY-NC-SA 4.0)
+        </a>
+      </div>
+    </footer>
+    <script src="../../../assets/js/toggleSidebar.js"></script>
+  </body>
+</html>
