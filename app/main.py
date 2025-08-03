@@ -39,3 +39,29 @@ def create_todo(user_id: int, todo: schemas.TodoCreate, db: Session = Depends(ge
 @app.get("/users/", response_model=list[schemas.User])
 def get_users(db: Session = Depends(get_db)):
     return crud.get_users(db)
+
+from fastapi import FastAPI
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+app = FastAPI()
+
+@app.get("/predict-next-month-expense")
+def predict_expense():
+    # Dummy past data: total expenses per month
+    months = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)  # e.g., Jan-May
+    expenses = np.array([3000, 3200, 3500, 3700, 4000])  # in currency
+
+    # Train linear regression model
+    model = LinearRegression()
+    model.fit(months, expenses)
+
+    # Predict for next month (June = 6)
+    next_month = 6
+    predicted_expense = model.predict([[next_month]])[0]
+
+    # Return as JSON
+    return {
+        "month": next_month,
+        "predicted_expense": round(float(predicted_expense), 2)
+    }
